@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela 6</title>
+</head>
+<body>
+    <img src = "fundogeral.jpeg" 
+    width="100%" heigh="100%";>
+    <div class = "Escolher\Discente/mostorista"></div>
+    <div class = "Discente/motorista">
+        <label for="Cadastro do">Cadastro do:</label><br>
+        <select id="Cadastro do" onchange="verificarEscolha()"><br>
+        <option value="" selected disabled>Escolher:</option>
+        <option value ="Discente"> Discente</option>
+        <option value ="Motorista"> Motorista</option>
+        </select><br><br>
+    </div>
+    <div class = "Nome/e-mail/CPF\cadastro">
+        <form action="">
+            <h5 id="nome"> <label for="fname">NOME:</label><br>
+            <input type="text" id="fname" name="fname" required placeholder="Ex: Maria"></h5><br><br>
+            <h6 id="seuemail"> <label for="fname">E-MAIL::</label><br>
+            <input type="text" id="fname" name="fname" required placeholder="Ex: Maria.12345@gmail.com"></h6><br><br>
+            <label for="lname">CPF:</label><br>
+            <input  id="lname" name="lname" required placeholder="_ _ . _ . _ _ - _ _">
+            <div class = "Escolher">
+                <label for="escolher">INSTITUIÇÃO DE ENSINO:</label><br>
+                <select id="escolher" onchange="verificarEscolha2()"><br>
+                <option value="" selected disabled>Escolher:</option>
+                <option value ="Opção1"> Colégio 1</option>
+                <option value ="Opção2"> Colégio 2</option>
+                <option value ="Opção3"> Colégio 3</option>
+                </select></h7><br><br>
+            </div>
+            <div class = "senha\cadastro">
+            <h7 id="nome"> <label for="fname">SENHA:</label><br>
+            <input type="text" id="fname" name="fname" required placeholder="...."></h7><br>
+            </div>
+            <div class = "Enviar.do.discente">
+                <h8><button>Enviar</button></h8>
+            </div>
+        </form> 
+    </div>
+
+</body>
+</html>
