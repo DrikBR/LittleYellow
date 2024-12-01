@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela 7</title>
+    <title>Cadastro do Motorista</title>
 </head>
 <body>
-    <img src = "fundo.jpeg" 
+    <img src = "fundogeral.jpeg" 
     width="100%" heigh="100%";>
     <div class = "CadastroMotorista">
-        <div class = "e-mail/senha">
-            <form action="">
-                <h9 id="nome"> <label for="fname">NOME:</label><br>
-                <input type="text" id="fname" name="fname" required placeholder="Ex: João"><br><br></h9>
-                <h10 id="seuemail"> <label for="fname">E-MAIL::</label><br>
-                <input type="text" id="fname" name="fname" required placeholder="Ex: João.12345@gmail.com"></h10<br><br>
-                <label for="lname">CPF:</label><br>
-                <input  id="lname" name="lname" required placeholder="_ _ . _ . _ _ - _ _"><br><br>
-                <label for="lname">SENHA:</label><br>
-                <input type="password" id="lname" name="lname" required placeholder="...."><br>
-                <a href = "tela5.html">
-                    <div class = "Enviar.do.motorista">
-                        <button>Enviar</button>
-                    </div>
-                </a>
-            </form> 
-        </div>
+        <form action="login.html" onsubmit="cadastroConcluido()">
+
+            <label for="nomeM" id="nomeM">NOME:</label><br>
+            <input type="text" id="nomeM" name="nomeM"placeholder="Ex: João" required><br><br>
+
+            <label for="emailM" id="emailM">E-MAIL::</label><br>
+            <input type="email" id="emailM" name="emailM" placeholder="Ex: João.12345@gmail.com" required><br><br>
+
+            <label for="CPFM" id="CPFM">CPF:</label><br>
+            <input type="number" id="CPFM" name="CPFM" placeholder="___.___.___-__" required><br><br>
+
+            <label for="senhaM" id="senhaM">SENHA:</label><br>
+            <input type="password" id="senhaM" name="senhaM" placeholder="**********" required><br><br>
+
+            <button type="submit">Enviar</button>
+        </form> 
     </div>
 </body>
 </html>
+<script src="script.js"></script>
