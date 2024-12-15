@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Discente</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <img src = "../imagens/fundogeral.jpeg" width="100%" heigh="100%";>
+
+    <div class = "cadastroD">
+        <h1>Cadastro do Discente</h1> <br>
+
+        <form action="login.html" name="aluno" id="cadastroForm" onsubmit="cadastroD()">
+            
+            <label for="nomeD">NOME:</label>
+            <input type="text" id="nomeD" name="nomeD" placeholder="Ex: Maria" required>
+            <div id="nomeError" class="erro"></div>
+            <div id="nomeSuccess" class="sucesso"></div>
+
+            <label for="emailD">E-MAIL::</label>
+            <input type="email" id="emailD" name="emailD" placeholder="Ex: Maria.12345@gmail.com" required>
+            <div id="emailError" class="erro"></div>
+            <div id="emailSuccess" class="sucesso"></div>
+
+            <label for="CPFD">CPF:</label>
+            <input type="text" id="CPFD" name="CPFD" placeholder="___.___.___-__" required>
+            <div id="cpfError" class="erro"></div>
+            <div id="cpfSuccess" class="sucesso"></div>
+            
+            <label for="escolher">INSTITUIÇÃO DE ENSINO:</label>
+            <select id="escolher" name="instituicao" required>
+                <option value="" selected disabled>Escolher:</option>
+                <option value="IFBA">IFBA</option>
+                <option value="CETEP">CETEP</option>
+                <option value="Núbia">Núbia</option>
+            </select><br>
+            <div id="instituicaoError" class="erro"></div>
+            <div id="instituicaoSuccess" class="sucesso"></div>
+
+            <label for="senhaD">SENHA:</label>
+            <input type="password" id="senhaD" name="senhaD" placeholder="**********" required>
+            <div id="senhaError" class="erro"></div>
+            <div id="senhaSuccess" class="sucesso"></div>
+
+            <button type="submit">Enviar</button>
+        </form> 
+    </div>
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            event.preventDefault();});
+    </script>
+</body>
+</html>
+<script src="../script.js"></script>
