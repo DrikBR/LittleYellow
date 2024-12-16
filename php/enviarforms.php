@@ -7,20 +7,20 @@ function validarFormulario() {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $response = [];
+    $resposta = [];
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $response['emailError'] = 'E-mail não encontrado no sistema. Por favor, tente novamente.';
+        $resposta['emailErrado'] = 'E-mail não encontrado no sistema. Por favor, tente novamente.';
     } else {
-        $response['emailSuccess'] = 'E-mail válido!';
+        $resposta['emailCerto'] = 'E-mail válido!';
     }
 
     if (empty($senha)) {
-        $response['senhaError'] = 'A senha não pode estar vazia.';
+        $resposta['senhaErrada'] = 'A senha não pode estar vazia.';
     } else {
-        $response['senhaSuccess'] = 'Senha preenchida corretamente.';
+        $resposta['senhaCerta'] = 'Senha preenchida corretamente.';
     }
 
-    echo json_encode($response);
+    echo json_encode($resposta);
 }
 ?>

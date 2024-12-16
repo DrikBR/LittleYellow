@@ -22,48 +22,48 @@ function cadastroD() {
             if (xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
 
-                document.getElementById('nomeError').textContent = '';
-                document.getElementById('nomeSuccess').textContent = '';
-                document.getElementById('emailError').textContent = '';
-                document.getElementById('emailSuccess').textContent = '';
-                document.getElementById('cpfError').textContent = '';
-                document.getElementById('cpfSuccess').textContent = '';
-                document.getElementById('instituicaoError').textContent = '';
-                document.getElementById('instituicaoSuccess').textContent = '';
-                document.getElementById('senhaError').textContent = '';
-                document.getElementById('senhaSuccess').textContent = '';
+                document.getElementById('nomeErrado').textContent = '';
+                document.getElementById('nomeCerto').textContent = '';
+                document.getElementById('emailErrado').textContent = '';
+                document.getElementById('emailCerto').textContent = '';
+                document.getElementById('cpfErrado').textContent = '';
+                document.getElementById('cpfCerto').textContent = '';
+                document.getElementById('instituicaoErrada').textContent = '';
+                document.getElementById('instituicaoCerta').textContent = '';
+                document.getElementById('senhaErrada').textContent = '';
+                document.getElementById('senhaCerta').textContent = '';
 
-                if (response.nomeError) {
-                    document.getElementById('nomeError').textContent = response.nomeError;
-                } else if (response.nomeSuccess) {
-                    document.getElementById('nomeSuccess').textContent = response.nomeSuccess;
+                if (response.nomeErrado) {
+                    document.getElementById('nomeErrado').textContent = response.nomeErrado;
+                } else if (response.nomeCerto) {
+                    document.getElementById('nomeCerto').textContent = response.nomeCerto;
                 }
 
-                if (response.emailError) {
-                    document.getElementById('emailError').textContent = response.emailError;
-                } else if (response.emailSuccess) {
-                    document.getElementById('emailSuccess').textContent = response.emailSuccess;
+                if (response.emailErrado) {
+                    document.getElementById('emailErrado').textContent = response.emailErrado;
+                } else if (response.emailCerto) {
+                    document.getElementById('emailCerto').textContent = response.emailCerto;
                 }
 
-                if (response.cpfError) {
-                    document.getElementById('cpfError').textContent = response.cpfError;
-                } else if (response.cpfSuccess) {
-                    document.getElementById('cpfSuccess').textContent = response.cpfSuccess;
+                if (response.cpfErrado) {
+                    document.getElementById('cpfErrado').textContent = response.cpfErrado;
+                } else if (response.cpfCerto) {
+                    document.getElementById('cpfCerto').textContent = response.cpfCerto;
                 }
 
-                if (response.instituicaoError) {
-                    document.getElementById('instituicaoError').textContent = response.instituicaoError;
-                } else if (response.instituicaoSuccess) {
-                    document.getElementById('instituicaoSuccess').textContent = response.instituicaoSuccess;
+                if (response.instituicaoErrada) {
+                    document.getElementById('instituicaoErrada').textContent = response.instituicaoErrada;
+                } else if (response.instituicaoCerta) {
+                    document.getElementById('instituicaoCerta').textContent = response.instituicaoCerta;
                 }
 
-                if (response.senhaError) {
-                    document.getElementById('senhaError').textContent = response.senhaError;
-                } else if (response.senhaSuccess) {
-                    document.getElementById('senhaSuccess').textContent = response.senhaSuccess;
+                if (response.senhaErrada) {
+                    document.getElementById('senhaErrada').textContent = response.senhaErrada;
+                } else if (response.senhaCerta) {
+                    document.getElementById('senhaCerta').textContent = response.senhaCerta;
                 }
 
-                if (response.nomeSuccess && response.emailSuccess && response.cpfSuccess && response.instituicaoSuccess && response.senhaSuccess) {
+                if (response.nomeCerto && response.emailCerto && response.cpfCerto && response.instituicaoCerta && response.senhaCerta) {
                     document.getElementById('cadastroForm').submit();
                     alert("Muito bem! Seu cadastro foi concluído com sucesso.\nPara acessar nosso site, faça o login!")
                 }
@@ -88,40 +88,40 @@ function cadastroM() {
             if (xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
 
-                document.getElementById('nomeError').textContent = '';
-                document.getElementById('nomeSuccess').textContent = '';
-                document.getElementById('emailError').textContent = '';
-                document.getElementById('emailSuccess').textContent = '';
-                document.getElementById('cpfError').textContent = '';
-                document.getElementById('cpfSuccess').textContent = '';
-                document.getElementById('senhaError').textContent = '';
-                document.getElementById('senhaSuccess').textContent = '';
+                document.getElementById('nomeErrado').textContent = '';
+                document.getElementById('nomeCerto').textContent = '';
+                document.getElementById('emailErrado').textContent = '';
+                document.getElementById('emailCerto').textContent = '';
+                document.getElementById('cpfErrado').textContent = '';
+                document.getElementById('cpfCerto').textContent = '';
+                document.getElementById('senhaErrada').textContent = '';
+                document.getElementById('senhaCerta').textContent = '';
 
-                if (response.nomeError) {
-                    document.getElementById('nomeError').textContent = response.nomeError;
-                } else if (response.nomeSuccess) {
-                    document.getElementById('nomeSuccess').textContent = response.nomeSuccess;
+                if (response.nomeErrado) {
+                    document.getElementById('nomeErrado').textContent = response.nomeErrado;
+                } else if (response.nomeCerto) {
+                    document.getElementById('nomeCerto').textContent = response.nomeCerto;
                 }
 
-                if (response.emailError) {
-                    document.getElementById('emailError').textContent = response.emailError;
-                } else if (response.emailSuccess) {
-                    document.getElementById('emailSuccess').textContent = response.emailSuccess;
+                if (response.emailErrado) {
+                    document.getElementById('emailErrado').textContent = response.emailErrado;
+                } else if (response.emailCerto) {
+                    document.getElementById('emailCerto').textContent = response.emailCerto;
                 }
 
-                if (response.cpfError) {
-                    document.getElementById('cpfError').textContent = response.cpfError;
-                } else if (response.cpfSuccess) {
-                    document.getElementById('cpfSuccess').textContent = response.cpfSuccess;
+                if (response.cpfErrado) {
+                    document.getElementById('cpfErrado').textContent = response.cpfErrado;
+                } else if (response.cpfCerto) {
+                    document.getElementById('cpfCerto').textContent = response.cpfCerto;
                 }
 
-                if (response.senhaError) {
-                    document.getElementById('senhaError').textContent = response.senhaError;
-                } else if (response.senhaSuccess) {
-                    document.getElementById('senhaSuccess').textContent = response.senhaSuccess;
+                if (response.senhaErrada) {
+                    document.getElementById('senhaErrada').textContent = response.senhaErrada;
+                } else if (response.senhaCerta) {
+                    document.getElementById('senhaCerta').textContent = response.senhaCerta;
                 }
 
-                if (response.nomeSuccess && response.emailSuccess && response.cpfSuccess && response.senhaSuccess) {
+                if (response.nomeCerto && response.emailCerto && response.cpfCerto && response.senhaCerta) {
                     document.getElementById('cadastroForm').submit();
                     alert("Muito bem! Seu cadastro foi concluído com sucesso.\nPara acessar nosso site, faça o login!")
                 }
@@ -146,24 +146,24 @@ function login() {
             if (xhr.status == 200) {
                 var response = JSON.parse(xhr.responseText);
 
-                document.getElementById('emailError').textContent = '';
-                document.getElementById('senhaError').textContent = '';
-                document.getElementById('emailSuccess').textContent = '';
-                document.getElementById('senhaSuccess').textContent = '';
+                document.getElementById('emailErrado').textContent = '';
+                document.getElementById('senhaErrada').textContent = '';
+                document.getElementById('emailCerto').textContent = '';
+                document.getElementById('senhaCerta').textContent = '';
 
-                if (response.emailError) {
-                    document.getElementById('emailError').textContent = response.emailError;
-                } else if (response.emailSuccess) {
-                    document.getElementById('emailSuccess').textContent = response.emailSuccess;
+                if (response.emailErrado) {
+                    document.getElementById('emailErrado').textContent = response.emailErrado;
+                } else if (response.emailCerto) {
+                    document.getElementById('emailCerto').textContent = response.emailCerto;
                 }
 
-                if (response.senhaError) {
-                    document.getElementById('senhaError').textContent = response.senhaError;
-                } else if (response.senhaSuccess) {
-                    document.getElementById('senhaSuccess').textContent = response.senhaSuccess;
+                if (response.senhaErrada) {
+                    document.getElementById('senhaErrada').textContent = response.senhaErrada;
+                } else if (response.senhaCerta) {
+                    document.getElementById('senhaCerta').textContent = response.senhaCerta;
                 }
 
-                if (response.emailSuccess && response.senhaSuccess) {
+                if (response.emailCerto && response.senhaCerta) {
                     document.getElementById('loginForm').submit();
                     alert("Deu certo! Seu login foi concluído.\nAproveite nossos recursos!")
                 }
