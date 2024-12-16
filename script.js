@@ -22,7 +22,6 @@ function cadastroD() {
             if (xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
 
-                // Limpa mensagens anteriores
                 document.getElementById('nomeError').textContent = '';
                 document.getElementById('nomeSuccess').textContent = '';
                 document.getElementById('emailError').textContent = '';
@@ -34,7 +33,6 @@ function cadastroD() {
                 document.getElementById('senhaError').textContent = '';
                 document.getElementById('senhaSuccess').textContent = '';
 
-                // Mostra mensagens baseadas na resposta
                 if (response.nomeError) {
                     document.getElementById('nomeError').textContent = response.nomeError;
                 } else if (response.nomeSuccess) {
