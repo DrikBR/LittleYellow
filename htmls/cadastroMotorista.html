@@ -12,7 +12,7 @@
     <div class = "cadastroM">
         <h1>Cadastro do Motorista</h1> <br>
 
-        <form action="login.html" id="cadastroForm" onsubmit="cadastroM()">
+        <form action="login.html" id="cadastroForm">
 
             <label for="nomeM">NOME:</label>
             <input type="text" id="nomeM" name="nomeM"placeholder="Ex: João" required>
@@ -37,10 +37,6 @@
             <button type="submit">Enviar</button>
         </form> 
     </div>
-    <script>
-        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
-            event.preventDefault();});
-    </script>
 </body>
 </html>
-<script src="../script.js"></script>
+<script src="../scripts/cadastroM.js"></script>

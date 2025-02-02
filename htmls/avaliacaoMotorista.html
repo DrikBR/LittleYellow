@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <img src = "../imagens/fundogeral.jpeg" width="100%" heigh="100%";>
+    
+    <div class="AvaliaçãoM">
+        <h1>Avaliação do <br>Motorista</h1>
+
+        <form action="recursos.html" id="avaliouM">
+            
+            <label for="escolher">Escolha quem avaliar:</label>
+                <select id="escolher" name="motorista" required>
+                    <option value="" selected disabled>Escolher:</option> <!-- tem que puxar o nome dos motoristas com o BD depois-->
+                    <option value="Gabriel">Gabriel</option>
+                    <option value="Joana">Joana</option>
+                    <option value="Vanderlei">Vanderlei</option>
+                </select><br>
+                <div id="motoristaErrado" class="erro"></div>
+                <div id="motoristaCerto" class="sucesso"></div>
+
+            <p id="notaescrita" class="nota"></p>
+    
+            <img src="../imagens/Estrela vazia.png" id="s1" class="estrela" onclick="Avaliar(1)">
+            <img src="../imagens/Estrela vazia.png" id="s2" class="estrela" onclick="Avaliar(2)">
+            <img src="../imagens/Estrela vazia.png" id="s3" class="estrela" onclick="Avaliar(3)">
+            <img src="../imagens/Estrela vazia.png" id="s4" class="estrela" onclick="Avaliar(4)">
+            <img src="../imagens/Estrela vazia.png" id="s5" class="estrela" onclick="Avaliar(5)">
+        
+            <input name="notaMotorista" class="armazenarvalor" id="valoravaliacao">
+
+            <div id="nota" class="nota"></div>
+            <div id="notaErrada" class="erro"></div>
+            <div id="notaCerta" class="sucesso"></div>
+
+            <h2>Avalie de forma escrita (opcional):</h2>
+
+            <textarea placeholder="Digite sua mensagem" name="avaliaçãoescrita"></textarea><br><br>
+
+            <button type="submit">Enviar sugestão</button>
+        </form>
+        
+    </div>
+</body>
+</html>
+<script src="../scripts/avaliacaoM.js"></script>

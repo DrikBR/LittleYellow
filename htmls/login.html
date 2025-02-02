@@ -12,7 +12,7 @@
     <div class = "Login">
         <h1>Login</h1> <br>
 
-        <form action="recursos.html" id="loginForm" name="formu" onsubmit="login()">
+        <form action="recursos.html" id="loginForm" name="formu">
 
             <label for="email">E-MAIL::</label>
             <input type="email" id="email" name="email" required placeholder="Ex: Maria.12345@gmail.com">
@@ -35,10 +35,6 @@
             </label>
         </form>
     </div>
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-        event.preventDefault();});
-    </script>
 </body>
 </html>
-<script src="../script.js"></script>
+<script src="../scripts/login.js"></script>

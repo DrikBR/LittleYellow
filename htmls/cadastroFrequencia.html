@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequência</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <img src = "../imagens/fundogeral.jpeg" width="100%" heigh="100%";>
+
+    <div class = "CadastroF">
+        <h1>Frequência</h1> <br>
+
+        <form action="" name="frequencia" id="cadastroFreq">
+            
+            <label for="data">DATA:</label>
+            <input type="date" id="data" name="data" required>
+            <div id="dataErrada" class="erro"></div>
+            <div id="dataCerta" class="sucesso"></div>
+
+            <label for="escolher">TURNO:</label>
+            <select id="escolher" name="turno" required>
+                <option value="" selected disabled>Escolher:</option>
+                <option value="MATUTINO">Matutino</option>
+                <option value="VESPERTINO">Vespertino</option>
+                <option value="NOTURNO">Noturno</option>
+            </select><br>
+            <div id="turnoErrado" class="erro"></div>
+            <div id="turnoCerto" class="sucesso"></div>
+
+            <label for="escolha">INSTITUIÇÃO DE ENSINO:</label>
+            <select id="escolha" name="instituicao" required>
+                <option value="" selected disabled>Escolher:</option>
+                <option value="IFBA">IFBA</option>
+                <option value="CETEP">CETEP</option>
+                <option value="Núbia">Núbia</option>
+            </select><br>
+            <div id="instituicaoErrada" class="erro"></div>
+            <div id="instituicaoCerta" class="sucesso"></div>
+            
+            <label>PRESENÇA:</label>
+            <div class="caixaPresenca" onclick="selecionarDiscente()">
+                <div class="listaPresenca"><label class="tituloescolha"> Escolha os discentes: </label></div>
+                <div class="discente"> <!-- tem que puxar o nome dos discentes com o BD depois-->
+                  <label><input type="checkbox" value="Maria"> Maria</label>
+                  <label><input type="checkbox" value="João"> João</label>
+                  <label><input type="checkbox" value="Pedro"> Pedro</label>
+                </div>
+            </div> 
+            <input name="discente" class="armazenarvalor" id="discentevalor"> <br>
+            <div id="discenteErrado" class="erro"></div>
+            <div id="discenteCerto" class="sucesso"></div>
+
+            <button type="submit">Enviar</button><br>
+        
+        </form>
+        <br>
+        <a href = "frequenciaGeral.html">Frequência Geral</a> <br>
+        <a href = "recursos.html">Voltar para a tela de recursos</a>
+        
+    </div>
+</body>
+</html>
+<script src="../scripts/frequencia.js"> </script>
