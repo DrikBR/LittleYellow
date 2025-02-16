@@ -6,17 +6,15 @@ body {
     justify-content: center; 
     align-items: center;
     height: 100vh; 
-    position: relative; 
+    position: relative;
+    background-image: url('./imagens/fundogeral.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
-img {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    z-index: -1;
+.fundo {
+    background-image: url('./imagens/fundorecursos.jpg');
 }
 
 div {
@@ -71,9 +69,14 @@ form button:hover {
 }
 
 .recursos {
+    display: flex;
     align-self: end;
-    font-size: 22px;
-    padding: 10px;
+    font-size: 30px;
+    position: relative;
+    right: 150px;
+    bottom: 40px;
+    margin: 15px;
+    gap: 400px;
 }
 
 .erro {

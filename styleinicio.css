@@ -1,0 +1,56 @@
+body {
+    margin: 0; 
+    padding: 0;
+    display: grid;
+    justify-content: center; 
+    align-items: center;
+    height: auto; 
+    position: relative;
+    background-image: url('./imagens/fundogeral.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-size: 50px;
+    
+}
+
+.fundo {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: -1;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+div { 
+    width: auto; 
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    
+}
+
+h1 {
+    font-family: cursive, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    margin: 0px;
+}
+
+.texto {
+    background-color: white;
+    font-size: 36px;
+}
+
+.juntar {
+    font-size: 60px;
+}
+
+a {
+    font-size: 40px;
+    bottom: 0;
+}
