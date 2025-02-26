@@ -10,7 +10,7 @@
     <div class = "cadastroD">
         <h1>Cadastro do Discente</h1> <br>
 
-        <form action="login.html" name="aluno" id="cadastroForm">
+        <form action="../conexaoBanco/discente.php" name="aluno" id="cadastroForm" method="post">
             
             <label for="nomeD">NOME:</label>
             <input type="text" id="nomeD" name="nomeD" placeholder="Ex: Maria" required>
@@ -30,9 +30,9 @@
             <label for="escolher">INSTITUIÇÃO DE ENSINO:</label>
             <select id="escolher" name="instituicao" required>
                 <option value="" selected disabled>Escolher:</option>
-                <option value="IFBA">IFBA</option>
-                <option value="CETEP">CETEP</option>
-                <option value="Núbia">Núbia</option>
+                <option value="1">IFBA</option>
+                <option value="2">CETEP</option>
+                <option value="3">Núbia</option>
             </select><br>
             <div id="instituicaoErrada" class="erro"></div>
             <div id="instituicaoCerta" class="sucesso"></div>

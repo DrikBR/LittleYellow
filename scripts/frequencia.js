@@ -2,7 +2,15 @@ function selecionarDiscente() {
     const caixaPresenca = document.querySelector('.caixaPresenca');
     const listaPresenca = document.querySelector('.listaPresenca');
     const discente = document.querySelector('.discente');
-    const escolhidos = Array.from(discente.querySelectorAll('input:checked')).map(checkbox => checkbox.value);
+    const inputDiscente = document.getElementById('discentevalor');
+
+    function atualizarSelecionados() {
+        let escolhidos = Array.from(discente.querySelectorAll('input:checked'))
+            .map(checkbox => checkbox.value);
+        inputDiscente.value = escolhidos.join(", ");
+    }
+
+    discente.addEventListener('change', atualizarSelecionados);
 
     listaPresenca.addEventListener('click', () => {
     caixaPresenca.classList.toggle('open');
@@ -13,8 +21,6 @@ function selecionarDiscente() {
             caixaPresenca.classList.remove('open');
         }
     })
-    
-    document.getElementById('discentevalor').value = escolhidos;
 }
 
 function cadastroF() {
@@ -36,8 +42,6 @@ function cadastroF() {
                 document.getElementById('dataCerta').textContent = '';
                 document.getElementById('turnoErrado').textContent = '';
                 document.getElementById('turnoCerto').textContent = '';
-                document.getElementById('instituicaoErrada').textContent = '';
-                document.getElementById('instituicaoCerta').textContent = '';
                 document.getElementById('discenteErrado').textContent = '';
                 document.getElementById('discenteCerto').textContent = '';
 
@@ -53,19 +57,13 @@ function cadastroF() {
                     document.getElementById('turnoCerto').textContent = response.turnoCerto;
                 }
 
-                if (response.instituicaoErrada) {
-                    document.getElementById('instituicaoErrada').textContent = response.instituicaoErrada;
-                } else if (response.instituicaoCerta) {
-                    document.getElementById('instituicaoCerta').textContent = response.instituicaoCerta;
-                }
-
                 if (response.discenteErrado) {
                     document.getElementById('discenteErrado').textContent = response.discenteErrado;
                 } else if (response.discenteCerto) {
                     document.getElementById('discenteCerto').textContent = response.discenteCerto;
                 }
 
-                if (response.dataCerta && response.turnoCerto && response.instituicaoCerta && response.discenteCerto) {
+                if (response.dataCerta && response.turnoCerto && response.discenteCerto) {
                     document.getElementById('cadastroFreq').submit();
                     alert("Deu certo! A frequência foi realizada com sucesso.")
                 }

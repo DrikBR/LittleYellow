@@ -10,7 +10,19 @@
     <div class = "CadastroF">
         <h1>Frequência</h1> <br>
 
-        <form action="" name="frequencia" id="cadastroFreq">
+        <?php
+            $conn = mysqli_connect ("localhost", "root", "", "LittleYellow");
+
+            $rsDiscentes = mysqli_query($conn, "SELECT * FROM discente");
+            $discentes = array();
+            $i = 0;
+            while($discente = mysqli_fetch_assoc($rsDiscentes)){
+                $discentes[$i] = $discente;
+                $i++;
+            }
+        ?>
+
+        <form action="../conexaoBanco/frequenciaC.php" name="frequencia" id="cadastroFreq" method="post">
             
             <label for="data">DATA:</label>
             <input type="date" id="data" name="data" required>
@@ -26,27 +38,18 @@
             </select><br>
             <div id="turnoErrado" class="erro"></div>
             <div id="turnoCerto" class="sucesso"></div>
-
-            <label for="escolha">INSTITUIÇÃO DE ENSINO:</label>
-            <select id="escolha" name="instituicao" required>
-                <option value="" selected disabled>Escolher:</option>
-                <option value="IFBA">IFBA</option>
-                <option value="CETEP">CETEP</option>
-                <option value="Núbia">Núbia</option>
-            </select><br>
-            <div id="instituicaoErrada" class="erro"></div>
-            <div id="instituicaoCerta" class="sucesso"></div>
             
             <label>PRESENÇA:</label>
             <div class="caixaPresenca" onclick="selecionarDiscente()">
                 <div class="listaPresenca"><label class="tituloescolha"> Escolha os discentes: </label></div>
-                <div class="discente"> <!-- tem que puxar o nome dos discentes com o BD depois-->
-                  <label><input type="checkbox" value="Maria"> Maria</label>
-                  <label><input type="checkbox" value="João"> João</label>
-                  <label><input type="checkbox" value="Pedro"> Pedro</label>
+                <div class="discente">
+                    <?php
+                        foreach($discentes as $d) { ?>
+                            <label><input type="checkbox" value="<?php echo $d['cpfD'] ?>"><?php echo$d['nomeD'] ?></label>
+                    <?php } ?>
                 </div>
             </div> 
-            <input name="discente" class="armazenarvalor" id="discentevalor"> <br>
+            <input name="discente" id="discentevalor" type="hidden"> <br>
             <div id="discenteErrado" class="erro"></div>
             <div id="discenteCerto" class="sucesso"></div>
 
@@ -55,7 +58,6 @@
         </form>
         <br>
         <a href = "frequenciaGeral.html">Frequência Geral</a> <br>
-        <a href = "recursos.html">Voltar para a tela de recursos</a>
         
     </div>
 </body>

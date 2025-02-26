@@ -4,9 +4,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 function validarAvaliacao() {
-    $motorista = $_POST['motorista'];
-    $nota = $_POST['notaMotorista'];
-    $avaliacaoEscrita = $_POST['avaliaçãoescrita'];
+    $motorista = trim($_POST['motorista']);
+    $nota = trim($_POST['notaMotorista']);
+    $avaliacaoEscrita = trim($_POST['avaliaçãoescrita']);
 
     $resposta = [];
 

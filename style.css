@@ -163,10 +163,6 @@ input[type="checkbox"] {
     margin-bottom: 0px;
 }
 
-.armazenarvalor {
-    display: none;
-}
-
 .estrela {
     position: relative;
     width: 50px;

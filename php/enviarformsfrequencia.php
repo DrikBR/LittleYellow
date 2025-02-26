@@ -6,9 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 function validarCadastro() {
     $data = trim($_POST['data']);
     $turno = trim($_POST['turno']);
-    $instituicao = trim($_POST['instituicao']);
     $discente = trim($_POST['discente']);
-
 
     $resposta = [];
 
@@ -22,12 +20,6 @@ function validarCadastro() {
         $resposta['turnoErrado'] = 'Por favor, selecione um turno para a frequência.';
     } else {
         $resposta['turnoCerto'] = 'Turno selecionado com sucesso!';
-    }
-
-    if (empty($instituicao)) {
-        $resposta['instituicaoErrada'] = 'Por favor, selecione uma instituição de ensino.';
-    } else {
-        $resposta['instituicaoCerta'] = 'Instituição selecionada com sucesso!';
     }
 
     if (empty($discente)) {

@@ -57,15 +57,16 @@ function estrela() {
     
 }
 
-function Avaliar($numero) {
-    nota = document.getElementById('nota');
-    if ($numero == 1){
-        nota.textContent = "A nota avaliada foi " + $numero + " estrela";
+function Avaliar(numero) {
+    let nota = document.getElementById('nota');
+    let estrelas = document.getElementById('valoravaliacao');
+    estrelas.value = numero;
+
+    if (numero == 1){
+        nota.textContent = "A nota avaliada foi " + numero + " estrela";
     } else {
-        nota.textContent = "A nota avaliada foi " + $numero + " estrelas";
+        nota.textContent = "A nota avaliada foi " + numero + " estrelas";
     }
-    
-    document.getElementById('valoravaliacao').value = $numero;
 }
 
 function AvaliarM() {

@@ -47,7 +47,7 @@ function cadastroM() {
 
                 if (response.nomeCerto && response.emailCerto && response.cpfCerto && response.senhaCerta) {
                     document.getElementById('cadastroForm').submit();
-                    alert("Muito bem! Seu cadastro foi concluído com sucesso.\nPara acessar nosso site, faça o login!")
+                    alert("Muito bem! Seu cadastro foi concluído com sucesso.\nPara acessar nosso site, faça o login!");
                 }
             }
         };
