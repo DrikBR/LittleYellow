@@ -57,7 +57,7 @@
         
         </form>
         <br>
-        <a href = "frequenciaGeral.html">Frequência Geral</a> <br>
+        <a href = "frequenciaGeral.php">Frequência Geral</a> <br>
         
     </div>
 </body>

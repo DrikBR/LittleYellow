@@ -2,37 +2,18 @@ function escolhaF() {
     const tabela = document.getElementById("tabelaF");
 
     tabela.addEventListener('click', function(event){
+        const cabecalho = tabela.rows[0]; 
         instituicao = event.target.parentNode.rowIndex;
-        data = event.target.cellIndex;
+        const coluna = event.target.cellIndex; 
 
-        if (data == 0) {
-            data = "19/11/24";
-            localStorage.setItem('dia', data);
-        } else if (data == 1) {
-            data = "20/11/24";
-            localStorage.setItem('dia', data);
-        } else if (data == 2) {
-            data = "21/11/24";
-            localStorage.setItem('dia', data);
+        if (coluna >= 0) { 
+            const data = cabecalho.cells[coluna].textContent; 
+            localStorage.setItem('dia', data); 
         }
 
-        if (instituicao == 1) {
-            instituicao = "IFBA";
+        if (instituicao) {
             localStorage.setItem('escola', instituicao);
-        } else if (instituicao == 2) {
-            instituicao = "CETEP";
-            localStorage.setItem('escola', instituicao);
-        } else if (instituicao == 3) {
-            instituicao = "Núbia";
-            localStorage.setItem('escola', instituicao);
-        }
-
-        console.log(instituicao);
-        console.log(data);
-
-        if (instituicao != 0) {
-            localStorage.setItem('escola', instituicao);
-            window.location.href = "../htmls/frequenciaDoDia.html";
+            window.location.href = "../htmls/frequenciaDoDia.php";
         }
     })
 }

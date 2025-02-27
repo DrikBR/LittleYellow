@@ -35,21 +35,15 @@ on update cascade
 );
 
 create table frequencia (
-idF int auto_increment primary key,
+idF int auto_increment,
 turno varchar(45) not null,
-dataF date not null
-);
+dataF date not null,
 
-create table transporte (
 cpfD varchar(15),
 foreign key (cpfD) references discente (cpfD)
 on update cascade,
 
-idF int,
-foreign key (idF) references frequencia (idF)
-on update cascade,
-
-primary key (cpfD, idF)
+primary key (cpfD, idF, dataF)
 );
 
 insert into instituicao (nomeI)
@@ -62,5 +56,5 @@ select * from motorista;
 select * from discente;
 select * from avaliacao;
 SELECT * FROM discente;
-
-drop table avaliacao;
+SELECT * FROM instituicao;
+SELECT * FROM frequencia;

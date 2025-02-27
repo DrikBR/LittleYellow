@@ -19,9 +19,9 @@ body {
 
 div {
     padding: 60px; 
-    border-radius: 16px;
+    border-radius: 30px;
     box-shadow: 0px 7px 15px rgba(255, 255, 255, 0.2); 
-    width: 350px; 
+    width: 300px; 
     text-align: center; 
 }
 
@@ -188,6 +188,58 @@ textarea {
     height: 150px;
 }
 
-.FreqGeral {
-    align-content: center;
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-shadow: 0px 0px 0px;
+}
+
+.titulo {
+    margin-bottom: 20px;
+    font-size: 37px;
+    font-weight: bold;
+
+}
+
+.tabela-container {
+   height:200px;
+   width: 400px; 
+   display: grid ;
+   justify-content: center;
+   align-items: center;
+   box-shadow : 8px 7px 39px rgb(255 255 255 / 80%);
+   padding: 0px;
+   border-radius: 15px;
+}
+
+#tabelaF {
+    width: 400px;
+    height: 200px;
+    border-collapse: collapse;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.voltar {
+    margin-top: 20px; 
+    text-decoration: none;
+    color: blue;
+    font-size: 16px;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+.cabecalho {
+    background-color: #fed14b;
+}
+
+.restotb {
+    background-color: #ffdc72;
 }
